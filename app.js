@@ -1,3 +1,10 @@
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const port = 4815;
+
+app.use(bodyParser.json()); // Pour analyser le JSON dans le corps des requêtes
+
 // ici sont apellés les fonctions des class DataProductManager, DataClientManager, DataHistoricManager, DataEntrClientManager et DataEntrHistoricManager
 
 const ProductManager = require('./DataManager/DataProductManager'); // Chemin relatif vers le fichier DataProductManager.js
@@ -36,7 +43,7 @@ SetProduct.post('/API/ProductInstance/SetProduct', (req, res) => {
 
 ReadProduct.get('/API/ProductInstance/ReadProduct', (req, res) => {
     const { _sku, _parameter } = req.body;
-    Data = ProductInstance.AddProduct(_sku, _parameter);
+    const Data = ProductInstance.AddProduct(_sku, _parameter);
     res.send(Data)
 });
 
@@ -62,7 +69,7 @@ SetClient.post('/API/ClientInstance/SetClient', (req, res) => {
 
 ReadClient.get('/API/ClientInstance/ReadClient', (req, res) => {
     const { _address, _parameter } = req.body;
-    Data = ClientInstance.AddClient(_address, _parameter);
+    const Data = ClientInstance.AddClient(_address, _parameter);
     res.send(Data)
 });
 
@@ -88,7 +95,7 @@ SetHistoric.post('/API/HistoricInstance/SetHistoric', (req, res) => {
 
 ReadHistoric.get('/API/HistoricInstance/ReadHistoric', (req, res) => {
     const { _address, _sku, _parameter } = req.body;
-    Data = HistoricInstance.AddHistoric(_address, _sku, _parameter);
+    const Data = HistoricInstance.AddHistoric(_address, _sku, _parameter);
     res.send(Data)
 });
 
@@ -114,7 +121,7 @@ SetEntrClient.post('/API/EntrClientInstance/SetEntrClient', (req, res) => {
 
 ReadEntrClient.post('/API/EntrClientInstance/ReadEntrClient', (req, res) => {
     const { _address, _parameter } = req.body;
-    Data = EntrClientInstance.ReadEntrClient(_address, _parameter);
+    const Data = EntrClientInstance.ReadEntrClient(_address, _parameter);
     res.send(Data)
 });
 
@@ -140,6 +147,10 @@ SetEntrHistoric.post('/API/EntrHistoricInstance/SetEntrHistoric', (req, res) => 
 
 ReadEntrHistoric.post('/API/EntrHistoricInstance/ReadEntrHistoric', (req, res) => {
     const { _address, _sku, _parameter } = req.body;
-    Data = EntrHistoricInstance.ReadEntrHistoric(_address, _sku, _parameter);
+    const Data = EntrHistoricInstance.ReadEntrHistoric(_address, _sku, _parameter);
     res.send(Data)
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
