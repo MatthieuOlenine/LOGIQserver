@@ -5,40 +5,40 @@ gestionnaire JSON d'une DB clients, DB produits et DB client entreprise.
 1. [Description]
 
 Chaques clients est enregistré avec les informations suivantes : 
-    address         :   suite de caractère hexadécimale, généré depuis 'mail', servant d'identification
-    password        :   mot de passe renseigné par l'utilisateur (doit IMPÉRATIVEMENT être haché avant d'étre stocké)
-    firstname       :   prénom de l'utilisateur
-    lastname        :   nom de famille de l'utilisateur
-    birth           :   date de naissance de l'utilisateur
-    mail            :   email de l'utilisateur
-    num             :   numéro téléphonique de l'utilisateur
-    creationdate    :   horodatage de création du compte de l'utilisateur (généré automatiquement)
-    lastco          :   horodatage de la dernière connection de l'utilisateur (dois être modifié dès que l'utilisateur se connecte au site)
-    historic        :   historique des commandes de l'utilisateur, liste de collections
+    address         :   suite de caractère hexadécimale, généré depuis 'mail', servant d'identification.
+    password        :   mot de passe renseigné par l'utilisateur (doit IMPÉRATIVEMENT être haché avant d'étre stocké).
+    firstname       :   prénom de l'utilisateur.
+    lastname        :   nom de famille de l'utilisateur.
+    birth           :   date de naissance de l'utilisateur.
+    mail            :   email de l'utilisateur.
+    num             :   numéro téléphonique de l'utilisateur.
+    creationdate    :   horodatage de création du compte de l'utilisateur (généré automatiquement).
+    lastco          :   horodatage de la dernière connection de l'utilisateur (dois être modifié dès que l'utilisateur se connecte au site).
+    historic        :   historique des commandes de l'utilisateur, liste de collections.
     
 Chaques produits est enregistré avec les informations suivantes : 
-    sku             :   suite de caractère hexadécimale, généré depuis 'product', servant d'identification
-    product         :   nom du produit
-    description     :   description du 
-    price           :   prix du produit
-    img             :   liste d'images (format .jpg requis)
-    nbcmd           :   nombre de fois où le produit à été commandé par un client ou une entreprise cliente, incrémentation automatique
-    disp            :   disponibilité du produit, initialisé sur 'true' pour disponible, et 'false' pour indisponible
+    sku             :   suite de caractère hexadécimale, généré depuis 'product', servant d'identification.
+    product         :   nom du produit.
+    description     :   description du.
+    price           :   prix du produit.
+    img             :   liste d'images (format .jpg requis).
+    nbcmd           :   nombre de fois où le produit à été commandé par un client ou une entreprise cliente, incrémentation automatique.
+    disp            :   disponibilité du produit, initialisé sur 'true' pour disponible, et 'false' pour indisponible.
 
 Chaques entreprises clients est enregistré avec les informations suivantes : 
-    address         :   suite de caractère hexadécimale, généré depuis 'mail', servant d'identification
-    password        :   mot de passe renseigné par l'utilisateur (doit IMPÉRATIVEMENT être haché avant d'étre stocké)
-    title           :   nom de l'entreprise
-    mail            :   email de l'entreprise
-    num             :   numéro téléphonique de l'entreprise
-    siret           :   numéro siret de l'entreprise client
-    creationdate    :   horodatage de création du compte de l'entreprise (généré automatiquement)
-    lastco          :   horodatage de la dernière connection de l'entreprise (dois être modifié dès que l'entreprise se connecte au site)
-    historic        :   historique des commandes de l'entreprise, liste de collections
+    address         :   suite de caractère hexadécimale, généré depuis 'mail', servant d'identification.
+    password        :   mot de passe renseigné par l'utilisateur (doit IMPÉRATIVEMENT être haché avant d'étre stocké).
+    title           :   nom de l'entreprise.
+    mail            :   email de l'entreprise.
+    num             :   numéro téléphonique de l'entreprise.
+    siret           :   numéro siret de l'entreprise client.
+    creationdate    :   horodatage de création du compte de l'entreprise (généré automatiquement).
+    lastco          :   horodatage de la dernière connection de l'entreprise (dois être modifié dès que l'entreprise se connecte au site).
+    historic        :   historique des commandes de l'entreprise, liste de collections.
 
 lorsqu'un produit bascule dans l'historique d'un client ou d'une entreprise cliente il gagne 2 autres parametres :
-    state           :   'initialisé sur 'com' pour commandé, peut être modifié par la suite pour afficher 'livré', ou 'expédié' par exemple
-    date            :   horodatage de la prise de la commande
+    state           :   'initialisé sur 'com' pour commandé, peut être modifié par la suite pour afficher 'livré', ou 'expédié' par exemple.
+    date            :   horodatage de la prise de la commande.
 
 2. [Installation]
 
