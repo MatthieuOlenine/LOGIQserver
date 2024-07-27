@@ -152,5 +152,5 @@ app.post('/API/EntrHistoricInstance/ReadEntrHistoric', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`\nServer is running on port ${port}\n\nhttp://localhost:4815/`);
 });
