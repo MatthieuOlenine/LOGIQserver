@@ -19,7 +19,7 @@ Chaques clients est enregistré avec les informations suivantes :
 Chaques produits est enregistré avec les informations suivantes : 
     sku             :   suite de caractère hexadécimale, généré depuis 'product', servant d'identification.
     product         :   nom du produit.
-    description     :   description du.
+    description     :   description du produit.
     price           :   prix du produit.
     img             :   liste d'images (format .jpg requis).
     nbcmd           :   nombre de fois où le produit à été commandé par un client ou une entreprise cliente, incrémentation automatique.
@@ -31,7 +31,7 @@ Chaques entreprises clients est enregistré avec les informations suivantes :
     title           :   nom de l'entreprise.
     mail            :   email de l'entreprise.
     num             :   numéro téléphonique de l'entreprise.
-    siret           :   numéro siret de l'entreprise client.
+    siret           :   numéro siret de l'entreprise cliente.
     creationdate    :   horodatage de création du compte de l'entreprise (généré automatiquement).
     lastco          :   horodatage de la dernière connection de l'entreprise (dois être modifié dès que l'entreprise se connecte au site).
     historic        :   historique des commandes de l'entreprise, liste de collections.
@@ -80,7 +80,7 @@ matthieuolenine@gmail.com
 
 7. [Tests]
 
-testez le gestionnaire via les annotations dans le fichier 'app.js'.
+testez le gestionnaire via les routes API dans le fichier 'app.js'.
 
 ## LOGIQ
 
